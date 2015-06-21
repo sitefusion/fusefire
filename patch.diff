@@ -67,3 +67,34 @@ index d9e5d54..f15d2af 100755
  MOZ_DISABLE_EXPORT_JS=1
  MOZ_SAFE_BROWSING=1
  MOZ_SERVICES_COMMON=1
+diff --git a/browser/app/macbuild/Contents/Info.plist.in b/browser/app/macbuild/Contents/Info.plist.in
+index ed2cf8d..19fce7d 100644
+--- a/browser/app/macbuild/Contents/Info.plist.in
++++ b/browser/app/macbuild/Contents/Info.plist.in
+@@ -143,11 +143,11 @@
+    </dict>
+  </array>
+  <key>CFBundleExecutable</key>
+- <string>firefox</string>
++ <string>SiteFusion</string>
+  <key>CFBundleGetInfoString</key>
+  <string>%MAC_APP_NAME% %APP_VERSION%</string>
+  <key>CFBundleIconFile</key>
+- <string>firefox.icns</string>
++ <string>SiteFusion.icns</string>
+  <key>CFBundleIdentifier</key>
+  <string>%MOZ_MACBUNDLE_ID%</string>
+  <key>CFBundleInfoDictionaryVersion</key>
+diff --git a/browser/app/Makefile.in b/browser/app/Makefile.in
+index d1c6eba..bda8338 100644
+--- a/browser/app/Makefile.in
++++ b/browser/app/Makefile.in
+@@ -8,7 +8,7 @@ dist_dest   = $(DIST)/$(MOZ_MACBUNDLE_NAME)
+ AB_CD = en-US
+
+ DEFINES += \
+-  -DFIREFOX_ICO='"$(DIST)/branding/firefox.ico"' \
++  -DFIREFOX_ICO='"$(DIST)/branding/sitefusion.ico"' \
+   -DDOCUMENT_ICO='"$(DIST)/branding/document.ico"' \
+   -DNEWWINDOW_ICO='"$(DIST)/branding/newwindow.ico"' \
+   -DNEWTAB_ICO='"$(DIST)/branding/newtab.ico"' \
